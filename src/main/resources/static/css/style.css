@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+	text-align: center;
+	background-image: url("/img/tree.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+}
+
+table {
+	
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	border: 1px solid #818c3c;
+	border-radius: 30px;
+}
+
+td, tr {
+	background-clip: padding-box;
+    border-radius: 15px;
+	border: none;
+	height: 40px;
+	width: 40px;
+}
+
+
+.content {
+	font-size: 30px;
+	color: #EA4335;
+	font-family: Book Antiqua;
+}
+
+.title {
+	font-size: 25px;
+	color: white;
+	font-family: Book Antiqua;
+}

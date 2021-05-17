@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Snake Game</title>
+<link th:href="@{/css/style.css}"  rel="stylesheet">
+</head>
+<body>
+
+<br><br>
+
+<div>
+<b><font class="content" th:text="${level}" id="level"></font></b>
+&nbsp;
+<b><font class="title">szint</font></b>
+&nbsp;&nbsp;&nbsp;
+<b><font class="title">Pontszám:</font></b>&nbsp;
+<b><font class="content" th:text="${score}" id="score"></font></b>
+</div>
+
+<table>
+
+<tr th:each="x: ${#numbers.sequence(0, board_rows - 1)}">
+<td th:each="y: ${#numbers.sequence(0, board_cols - 1)}" th:id="${x * board_cols + y}"
+	th:style="|background-color: ${board[x * board_cols + y].color}|">
+</tr>
+
+</table>
+
+</body>
+
+<input type="hidden" th:value="${board_rows}" th:id="rows">
+<input type="hidden" th:value="${board_cols}" th:id="cols">
+
+<script type="text/javascript" th:src="@{/script/script.js}"></script>
+
+</html>
